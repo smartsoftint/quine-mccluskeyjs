@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- 
+Programmed and CopyWrited by Larry Battle
+Date: 10/26/2010
+-->
+<html>
+<head>
+	<title>Unit test for Quine-McCluskeyJS</title>
+</head>
+<noscript><h2>ERROR: Please enable javascript.</h2></noscript>
+<body>
+	<p>
+	Program: Quine-McCluskeyJS <br/>
+	Test file: unitTest.js <br/>
+	Testing all functions within Quine-MyCluskeyJS.<br/>
+	Note: Test only works in Firefox.<br/>
+	<br/>
+	Function call: doAllUnitTestsPass( qm.func );<br/>
+	Result: <b id="unitTestResults">...</b><br/>
+	</p>
+</body>
+<script src="js/qm.js"></script>
+<script src="js/unitTests.js"></script>
+<script type="text/javascript">
+(function(){
+	var resultTxt = ( doAllUnitTestsPass( qm.func ))? "All the unit tests have passed." : "FAILED.";
+	document.getElementById( "unitTestResults" ).innerHTML = resultTxt;
+})();
+</script>
+</html>
